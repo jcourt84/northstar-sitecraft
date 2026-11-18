@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NorthStar Sitecraft creates modern, professional websites for small businesses. Build your digital direction with us.">
+    <title>NorthStar Sitecraft | Websites Built for Your Business</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #142B40;
+            --navy-light: #203D55;
+            --gold: #D8B76A;
+            --cream: #F5F6F8;
+            --white: #FFFFFF;
+            --text: #263445;
+            --muted: #687887;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: var(--navy);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Manrope', sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            display: block;
+            color: var(--gold);
+            font-size: 10px;
+            letter-spacing: 4px;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #E6ECF1;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-contact {
+            border: 1px solid var(--gold);
+            padding: 10px 19px;
+            border-radius: 4px;
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                linear-gradient(110deg, rgba(15, 37, 56, 0.97), rgba(20, 43, 64, 0.82)),
+                url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=85');
+            background-size: cover;
+            background-position: center;
+            min-height: 660px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 760px;
+            padding: 100px 0;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.12;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-description {
+            color: #D5DEE6;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 15px 25px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+        .button:hover {
+            background: #E8CC8B;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            display: inline-block;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.55);
+            padding: 14px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 12px;
+            transition: 0.25s ease;
+        }
+
+        .button-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* INTRODUCTION */
+
+        .intro {
+            padding: 95px 0;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #A17D32;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-family: 'Manrope', sans-serif;
+            color: var(--navy);
+            font-size: clamp(30px, 4vw, 42px);
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            max-width: 680px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: var(--cream);
+            padding: 95px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 35px 30px;
+            border: 1px solid #E8EBEF;
+            border-radius: 7px;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(20, 43, 64, 0.09);
+        }
+
+        .service-number {
+            color: var(--gold);
+            font-family: 'Manrope', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-family: 'Manrope', sans-serif;
+            color: var(--navy);
+            font-size: 20px;
+            margin-bottom: 13px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* ABOUT */
+
+        .about {
+            padding: 100px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 390px;
+            background:
+                linear-gradient(rgba(20,43,64,0.12), rgba(20,43,64,0.12)),
+                url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=85');
+            background-size: cover;
+            background-position: center;
+            border-radius: 7px;
+        }
+
+        .about-content .section-title {
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        /* PORTFOLIO */
+
+        .portfolio {
+            background: var(--cream);
+            padding: 95px 0;
+        }
+
+        .project-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(20, 43, 64, 0.07);
+        }
+
+        .project-image {
+            min-height: 350px;
+            background:
+                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1500&q=85');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 32px;
+        }
+
+        .project-tag {
+            color: #A17D32;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .project-content h3 {
+            font-family: 'Manrope', sans-serif;
+            color: var(--navy);
+            font-size: 26px;
+            margin: 10px 0;
+        }
+
+        .project-content p {
+            color: var(--muted);
+            margin-bottom: 22px;
+            max-width: 700px;
+        }
+
+        .project-link {
+            color: var(--navy);
+            font-weight: 700;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 4px;
+        }
+
+        .project-link:hover {
+            color: #A17D32;
+        }
+
+        /* PROCESS */
+
+        .process {
+            padding: 95px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 45px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .process-circle {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 20px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .process-step h3 {
+            color: var(--navy);
+            font-family: 'Manrope', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .contact .section-title {
+            color: var(--white);
+        }
+
+        .contact p {
+            color: #D5DEE6;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0D2030;
+            color: #B9C5CF;
+            padding: 28px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                padding: 17px 0;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 590px;
+            }
+
+            .hero-content {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .button,
+            .button-outline {
+                display: block;
+                text-align: center;
+                margin: 12px 0 0;
+            }
+
+            .intro,
+            .services,
+            .about,
+            .portfolio,
+            .process {
+                padding: 70px 0;
+            }
+
+            .service-grid,
+            .about-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 270px;
+            }
+
+            .project-image {
+                min-height: 230px;
+            }
+
+            .project-content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo">
+                <div class="logo-mark">✦</div>
+                <div class="logo-text">
+                    NORTHSTAR
+                    <span>SITECRAFT</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Our Work</a></li>
+                    <li><a href="#contact" class="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR BUSINESS. YOUR VISION. OUR CRAFT.</p>
+
+                <h1>
+                    Build Your Business's
+                    <span>Digital Direction.</span>
+                </h1>
+
+                <p class="hero-description">
+                    We create modern, professional websites that help small
+                    businesses stand out, connect with customers, and grow
+                    with confidence.
+                </p>
+
+                <a href="#contact" class="button">Start Your Project</a>
+                <a href="#work" class="button-outline">Explore Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro">
+        <div class="container">
+            <p class="section-label">NORTHSTAR SITECRAFT</p>
+
+            <h2 class="section-title">
+                A Better Website Starts With a Clear Direction.
+            </h2>
+
+            <p class="section-description">
+                Your website is often the first impression customers have
+                of your business. We help make that impression count with
+                clean design, thoughtful details, and experiences built
+                around your goals.
+            </p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-label">WHAT WE DO</p>
+                <h2 class="section-title">Digital Solutions for Small Businesses</h2>
+                <p class="section-description">
+                    Everything you need to establish a professional online presence.
+                </p>
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Website Design</h3>
+                    <p>
+                        Modern, visually engaging websites designed to
+                        represent your business and make a strong first
+                        impression.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>Mobile Optimization</h3>
+                    <p>
+                        Responsive layouts that look and work great across
+                        smartphones, tablets, laptops, and desktop screens.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>Contact & Lead Forms</h3>
+                    <p>
+                        Convenient ways for potential customers to reach
+                        your business and ask about your services.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <h3>Website Updates</h3>
+                    <p>
+                        Keep your website current with content changes,
+                        new photos, updated services, and improvements.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">05</div>
+                    <h3>Business Branding</h3>
+                    <p>
+                        Consistent visual elements and thoughtful design
+                        choices that help your business build recognition.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">06</div>
+                    <h3>Website Maintenance</h3>
+                    <p>
+                        Ongoing support to help keep your website organized,
+                        functional, and looking its best.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-image"></div>
+
+            <div class="about-content">
+                <p class="section-label">WHO WE ARE</p>
+
+                <h2 class="section-title">
+                    Helping Businesses Find Their Digital Direction.
+                </h2>
+
+                <p>
+                    At NorthStar Sitecraft, we believe every small business
+                    deserves a website that reflects the quality of its work.
+                </p>
+
+                <p>
+                    Our focus is on creating straightforward, professional,
+                    and effective websites without unnecessary complexity.
+                    We work to understand each business and turn its vision
+                    into a strong online presence.
+                </p>
+
+                <p>
+                    From the first design concept to the finished website,
+                    our goal is to make the process clear and approachable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="work">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-label">OUR WORK</p>
+                <h2 class="section-title">Projects That Bring Ideas to Life.</h2>
+                <p class="section-description">
+                    Explore an example of the websites we can create for
+                    businesses looking to strengthen their online presence.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"></div>
+
+                <div class="project-content">
+                    <p class="project-tag">DEMO PROJECT · LANDSCAPING</p>
+
+                    <h3>GreenScape Landscaping</h3>
+
+                    <p>
+                        A landscaping business website concept featuring
+                        service information, project photography, a dedicated
+                        gallery, and a quote request form. Created to
+                        demonstrate our approach to small-business web design.
+                    </p>
+
+                    <a
+                        href="https://jcourt84.github.io/landscaping-website/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Website →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-label">HOW IT WORKS</p>
+                <h2 class="section-title">A Simple Process. A Better Website.</h2>
+                <p class="section-description">
+                    We keep things straightforward from the first conversation
+                    to the final launch.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-circle">01</div>
+                    <h3>Discover</h3>
+                    <p>
+                        We learn about your business, your goals, and what
+                        you want your website to accomplish.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-circle">02</div>
+                    <h3>Design & Build</h3>
+                    <p>
+                        We create your website with a focus on appearance,
+                        usability, and mobile responsiveness.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-circle">03</div>
+                    <h3>Launch</h3>
+                    <p>
+                        After reviewing the finished website together,
+                        we prepare it for launch and help you take the
+                        next step online.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <p class="eyebrow">LET'S BUILD SOMETHING GREAT</p>
+
+            <h2 class="section-title">
+                Ready to Take Your Business Online?
+            </h2>
+
+            <p>
+                Have an idea for a website? Let's talk about your business,
+                your goals, and how we can help bring your vision to life.
+            </p>
+
+            <a href="mailto:jamiecourtright@yahoo.com" class="button">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 <span>NorthStar Sitecraft</span>.
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
