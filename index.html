@@ -633,6 +633,327 @@
 
 }
 
+/* ========================================
+   NORTHSTAR SITECRAFT PRICING
+======================================== */
+
+.pricing {
+    padding: 100px 8%;
+    background: #f5f7fa;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 45px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 28px;
+    background: #ffffff;
+    border: 1px solid #e3e7ed;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(20, 43, 64, 0.05);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(20, 43, 64, 0.12);
+}
+
+.pricing-featured {
+    border: 2px solid #c49a48;
+    box-shadow: 0 12px 32px rgba(20, 43, 64, 0.1);
+}
+
+.pricing-popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #c49a48;
+    color: #142b40;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    white-space: nowrap;
+}
+
+.pricing-package {
+    color: #a17d32;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.pricing-card h3 {
+    color: #142b40;
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.pricing-amount {
+    color: #142b40;
+    font-size: 39px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.pricing-amount span {
+    font-size: 13px;
+    color: #687887;
+    font-weight: 400;
+}
+
+.pricing-description {
+    color: #687887;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    flex: 1;
+}
+
+.pricing-features li {
+    position: relative;
+    padding: 9px 0 9px 25px;
+    color: #35485b;
+    font-size: 13px;
+    line-height: 1.5;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #a17d32;
+    font-weight: 800;
+}
+
+.pricing-button {
+    display: block;
+    text-align: center;
+    background: #142b40;
+    color: #ffffff;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.25s ease;
+}
+
+.pricing-button:hover {
+    background: #a17d32;
+    color: #ffffff;
+}
+
+.pricing-featured .pricing-button {
+    background: #a17d32;
+}
+
+.pricing-featured .pricing-button:hover {
+    background: #142b40;
+}
+
+.pricing-note {
+    margin: 28px auto 0;
+    max-width: 850px;
+    text-align: center;
+    color: #687887;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .pricing {
+        padding: 75px 6%;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pricing-card {
+        padding: 30px 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-card,
+    .pricing-button {
+        transition: none;
+    }
+
+    .pricing-card:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   WEBSITE OWNERSHIP SECTION
+======================================== */
+
+.ownership {
+    padding: 100px 8%;
+    background: #142b40;
+    color: #ffffff;
+}
+
+.ownership-heading {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.ownership-label {
+    color: #d4af68;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.ownership-heading h2 {
+    color: #ffffff;
+    font-size: clamp(32px, 4vw, 46px);
+    margin-bottom: 20px;
+}
+
+.ownership-intro {
+    color: #d8e0e8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.ownership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.ownership-card {
+    padding: 32px 28px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 175, 104, 0.25);
+    border-radius: 12px;
+}
+
+.ownership-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+    border-radius: 50%;
+    background: rgba(212, 175, 104, 0.14);
+    color: #d4af68;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.ownership-card h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.ownership-card p {
+    color: #d8e0e8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.ownership-bottom {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ownership-bottom h3 {
+    color: #ffffff;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.ownership-bottom p {
+    color: #d8e0e8;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.ownership-button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 6px;
+    background: #d4af68;
+    color: #142b40;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.25s ease,
+                transform 0.25s ease;
+}
+
+.ownership-button:hover {
+    background: #f0d49d;
+    color: #142b40;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .ownership-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .ownership {
+        padding: 75px 6%;
+    }
+
+    .ownership-card {
+        padding: 28px 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ownership-button {
+        transition: none;
+    }
+
+    .ownership-button:hover {
+        transform: none;
+    }
+}
+
     </style>
 </head>
 
@@ -803,6 +1124,229 @@
             </div>
         </div>
     </section>
+
+<!-- PRICING -->
+
+<section class="pricing" id="pricing">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="section-label">SIMPLE, TRANSPARENT PRICING</p>
+
+            <h2 class="section-title">
+                Professional Websites. One-Time Pricing.
+            </h2>
+
+            <p class="section-description">
+                Choose the website package that fits your business.
+                Every package includes website ownership, a complete
+                handover, and 30 days of post-launch bug-fix support.
+                No mandatory monthly maintenance fees.
+            </p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <!-- STARTER PACKAGE -->
+
+            <article class="pricing-card">
+
+                <p class="pricing-package">STARTER</p>
+
+                <h3>Starter Website</h3>
+
+                <div class="pricing-amount">
+                    $299 <span>one-time</span>
+                </div>
+
+                <p class="pricing-description">
+                    A professional online presence for
+                    a new or growing small business.
+                </p>
+
+                <ul class="pricing-features">
+                    <li>Custom single-page website</li>
+                    <li>Mobile-responsive design</li>
+                    <li>Services and business information</li>
+                    <li>Contact and social media links</li>
+                    <li>Basic on-page SEO</li>
+                    <li>Domain and hosting configuration</li>
+                    <li>1 round of revisions</li>
+                </ul>
+
+                <a href="#contact" class="pricing-button">
+                    Get Started
+                </a>
+
+            </article>
+
+
+            <!-- PROFESSIONAL PACKAGE -->
+
+            <article class="pricing-card pricing-featured">
+
+                <div class="pricing-popular">
+                    MOST POPULAR
+                </div>
+
+                <p class="pricing-package">PROFESSIONAL</p>
+
+                <h3>Professional Website</h3>
+
+                <div class="pricing-amount">
+                    $599 <span>one-time</span>
+                </div>
+
+                <p class="pricing-description">
+                    A more complete website designed
+                    to showcase your business and services.
+                </p>
+
+                <ul class="pricing-features">
+                    <li>Everything in Starter</li>
+                    <li>Up to 5 website pages</li>
+                    <li>Custom branding and styling</li>
+                    <li>Interactive photo gallery</li>
+                    <li>Contact or quote request form</li>
+                    <li>Enhanced on-page SEO</li>
+                    <li>Google Search Console setup</li>
+                    <li>2 rounds of revisions</li>
+                </ul>
+
+                <a href="#contact" class="pricing-button">
+                    Get Started
+                </a>
+
+            </article>
+
+
+            <!-- PREMIUM PACKAGE -->
+
+            <article class="pricing-card">
+
+                <p class="pricing-package">PREMIUM</p>
+
+                <h3>Premium Website</h3>
+
+                <div class="pricing-amount">
+                    $999+ <span>one-time</span>
+                </div>
+
+                <p class="pricing-description">
+                    An advanced website with additional
+                    features and custom visual elements.
+                </p>
+
+                <ul class="pricing-features">
+                    <li>Everything in Professional</li>
+                    <li>Up to 10 website pages</li>
+                    <li>Advanced animations and effects</li>
+                    <li>Custom video integration</li>
+                    <li>Advanced project galleries</li>
+                    <li>Custom inquiry forms</li>
+                    <li>Performance optimization</li>
+                    <li>3 rounds of revisions</li>
+                </ul>
+
+                <a href="#contact" class="pricing-button">
+                    Request a Quote
+                </a>
+
+            </article>
+
+        </div>
+
+        <p class="pricing-note">
+            Domain registration, business email, and any paid
+            third-party services are billed separately.
+            Additional features and future website updates
+            are available by quote.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- WEBSITE OWNERSHIP -->
+
+<section class="ownership" id="ownership">
+
+    <div class="container">
+
+        <div class="ownership-heading">
+            <p class="ownership-label">
+                THE NORTHSTAR SITECRAFT DIFFERENCE
+            </p>
+
+            <h2>Your Website. Your Ownership.</h2>
+
+            <p class="ownership-intro">
+                Your business deserves a website that belongs to you.
+                At NorthStar Sitecraft, we build professional websites
+                with straightforward pricing, a complete handover,
+                and no mandatory monthly maintenance fees.
+            </p>
+        </div>
+
+        <div class="ownership-grid">
+
+            <div class="ownership-card">
+                <div class="ownership-icon">01</div>
+                <h3>Complete Ownership</h3>
+                <p>
+                    Receive your completed website files and
+                    ownership of the custom website work covered
+                    by your agreement. Your domain and hosting
+                    are set up under accounts you control.
+                </p>
+            </div>
+
+            <div class="ownership-card">
+                <div class="ownership-icon">02</div>
+                <h3>One-Time Pricing</h3>
+                <p>
+                    Pay for your website without being locked into
+                    recurring maintenance fees. Domain renewals
+                    and any third-party service charges are
+                    separate from our development pricing.
+                </p>
+            </div>
+
+            <div class="ownership-card">
+                <div class="ownership-icon">03</div>
+                <h3>30-Day Bug-Fix Support</h3>
+                <p>
+                    Every website includes 30 days of post-launch
+                    support for bugs caused by our original
+                    development. New features and content
+                    changes are not included.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="ownership-bottom">
+
+            <h3>Need Changes Later? No Problem.</h3>
+
+            <p>
+                After your website is handed over, you're free
+                to manage it yourself or hire another developer.
+                If you'd like our help with future updates,
+                we offer separately scheduled services
+                starting at $40 per hour.
+            </p>
+
+            <a href="#contact" class="ownership-button">
+                Start Your Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- PORTFOLIO -->
     <section class="portfolio" id="work">
