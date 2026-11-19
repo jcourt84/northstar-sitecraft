@@ -550,6 +550,89 @@
                 padding: 25px;
             }
         }
+
+/* ========================================
+   EXPANDED PORTFOLIO
+======================================== */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.portfolio-grid .project-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.portfolio-grid .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(20, 43, 64, 0.12);
+}
+
+.ambient-project-image {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.portfolio-grid .project-image {
+    min-height: 300px;
+    height: 300px;
+}
+
+.portfolio-grid .project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.portfolio-grid .project-link {
+    margin-top: auto;
+}
+
+.portfolio-grid .project-tag {
+    color: #A17D32;
+}
+
+
+/* MOBILE PORTFOLIO */
+
+@media (max-width: 768px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ambient-project-image,
+    .portfolio-grid .project-image {
+        height: 250px;
+        min-height: 250px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portfolio-grid .project-card {
+        transition: none;
+    }
+
+    .portfolio-grid .project-card:hover {
+        transform: none;
+    }
+
+}
+
     </style>
 </head>
 
@@ -728,10 +811,52 @@
                 <p class="section-label">OUR WORK</p>
                 <h2 class="section-title">Projects That Bring Ideas to Life.</h2>
                 <p class="section-description">
-                    Explore an example of the websites we can create for
-                    businesses looking to strengthen their online presence.
+                    <p class="section-description">
+    Explore our website projects and see how we help
+    businesses establish a professional online presence.
+</p>
                 </p>
             </div>
+
+<div class="portfolio-grid">
+
+    <!-- AMBIENT LIGHTS LLC -->
+
+    <div class="project-card">
+
+        <img src="images/ambient-lights.webp"
+             class="ambient-project-image"
+             alt="Custom purple starlight headliner by Ambient Lights LLC"
+             loading="lazy">
+
+        <div class="project-content">
+
+            <p class="project-tag">
+                CLIENT PROJECT · AUTOMOTIVE
+            </p>
+
+            <h3>Ambient Lights LLC</h3>
+
+            <p>
+                A custom website for an automotive lighting
+                business in Central New York. Featuring a
+                cinematic video background, interactive photo
+                gallery, project videos, and mobile-responsive
+                design.
+            </p>
+
+            <a href="https://ambientlightsllc.com"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-link">
+                View Live Website →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- GREENSCAPE LANDSCAPING -->
 
             <div class="project-card">
                 <div class="project-image"></div>
@@ -754,13 +879,15 @@
                         rel="noopener noreferrer"
                         class="project-link"
                     >
-                        View Website →
+                        View Live Demo →
                     </a>
-                </div>
+                                </div>
             </div>
+
+        </div><!-- End portfolio-grid -->
+
         </div>
     </section>
-
     <!-- PROCESS -->
     <section class="process">
         <div class="container">
